@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-color: #ededed;
+}
+
+.form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+.form-section form {
+    width: 40%;
+}
+
+.form-box {
+    width: 100%;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #ededed;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.form-group input {
+    margin-bottom: 16px;
+    height: 36px;
+    border: 1px solid #999999;
+    padding-left: 16px;
+    color: #333333;
+}
+
+.form-group input:focus {
+    outline: 0;
+}
+
+.btn {
+    border: 0 !important;
+    height: 36px !important;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.btn-submit {
+    background-color: #1877f2;
+    color: #ffffff !important;
+    font-size: 16px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.header-wrap {
+    width: 100%;
+    height: 50px;
+    background-color: #1877f2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    color: #ffffff;
+}
+
+.header-wrap .menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.header-wrap .menu ul li {
+    margin: 10px;
+}
+
+.header-wrap .menu ul li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.sidebar {
+    width: 250px;
+    height: calc(100vh - 50px);
+    position: fixed;
+    left: 0;
+    top: 50px;
+    background-color: #005fdb;
+}
+
+.sidebar .menu ul {
+    list-style: none;
+
+}
+
+.sidebar .menu {
+    margin-top: 50px;
+}
+
+.sidebar .menu ul li {
+    margin: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5)
+}
+
+.sidebar .menu ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    display: block;
+    width: 100%;
+    text-transform: capitalize;
+}
+
+.main {
+    width: calc(100% - 280px);
+    margin-left: 275px;
+    padding: 30px;
+    background-color: #ededed;
+}
+
+.main table {
+    margin-top: 75px;
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+.main table tr th,
+.main table tr td {
+    border: 1px solid #ededed;
+    padding: 16px;
+    color: #333333;
+    font-size: 14px;
+}
+
+.main table tr td {
+    text-align: center;
+}
