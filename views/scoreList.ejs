@@ -1,0 +1,55 @@
+<%- include('_header')%>
+    <%- include('_sidebar')%>
+
+        <div class="main">
+            <h1>Score</h1>
+            <div class="add">
+                <a href="/score/add"><button class="btn btn-submit">Add</button></a>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>DSA</th>
+                        <th>Web Development</th>
+                        <th>React</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for (score of scores) {%>
+                        <tr>
+                            <td>
+                                <%= score.student.name %>
+                            </td>
+                            <td>
+                                <%= score.dsaScore %>
+                            </td>
+                            <td>
+                                <%= score.webDScore %>
+                            </td>
+                            <td>
+                                <%= score.reactScore %>
+                            </td>
+                            <td>
+                                <a href="#"><span class="material-symbols-outlined">
+                                        edit
+                                    </span></a>
+                                <a href="#">
+                                    <span class="material-symbols-outlined">
+                                        delete
+                                    </span>
+                                </a>
+                            </td>
+
+                        </tr>
+                        <%}%>
+
+
+
+
+
+
+                </tbody>
+            </table>
+        </div>

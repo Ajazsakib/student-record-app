@@ -1,0 +1,49 @@
+<%- include('_header')%>
+    <%- include('_sidebar')%>
+
+        <div class="main">
+            <div class="add">
+                <a href="/student/add"><button class="btn btn-submit">Add </button></a>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>batch</th>
+                        <th>Status</th>
+
+
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(student of students) { %>
+                        <tr>
+                            <td>
+                                <%= student.name %>
+                            </td>
+                            <td>
+                                <%= student.batch.name %>
+                            </td>
+                            <td>
+                                <%= student.status %>
+                            </td>
+
+                            <td>
+                                <a href="#"><span class="material-symbols-outlined">
+                                        edit
+                                    </span></a>
+                                <a href="#">
+                                    <span class="material-symbols-outlined">
+                                        delete
+                                    </span>
+                                </a>
+                            </td>
+                        </tr>
+                        <%}%>
+
+                </tbody>
+            </table>
+        </div>
+
+        <%- include('_footer')%>

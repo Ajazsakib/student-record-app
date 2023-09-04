@@ -40,7 +40,7 @@ body {
     margin-bottom: 6px;
 }
 
-.form-group input {
+.form-group .form-control {
     margin-bottom: 16px;
     height: 36px;
     border: 1px solid #999999;
@@ -135,6 +135,18 @@ body {
     margin-left: 275px;
     padding: 30px;
     background-color: #ededed;
+    position: relative;
+}
+
+.main .add {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    width: 120px;
+}
+
+.main .add a {
+    text-decoration: none;
 }
 
 .main table {
@@ -154,4 +166,18 @@ body {
 
 .main table tr td {
     text-align: center;
+}
+
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-container .form-group {
+    flex: 0 0 48%;
+    margin: 0 10px;
+}
+
+.mt-23 {
+    margin-top: 23px;
 }

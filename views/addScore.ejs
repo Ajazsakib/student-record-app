@@ -1,0 +1,36 @@
+<%- include('_header')%>
+    <%- include('_sidebar')%>
+
+
+        <div class="main">
+            <h1>Add Score</h1>
+            <form class="form-container" action="/score/createScore" method="POST">
+                <div class="form-group">
+                    <label>Student Name</label>
+                    <select class="form-control" name="student">
+                        <option>Choose Student</option>
+                        <% for(student of students) {%>
+                            <option value="<%= student.name %>">
+                                <%= student.name %>
+                            </option>
+                            <%}%>
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>DSA Score</label>
+                    <input type="text" class="form-control" name="dsaScore" />
+                </div>
+                <div class="form-group">
+                    <label>WebD Score</label>
+                    <input type="text" class="form-control" name="webDScore" />
+                </div>
+                <div class="form-group">
+                    <label>React Score</label>
+                    <input type="text" class="form-control" name="reactScore" />
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-submit" value="Submit" />
+                </div>
+            </form>
+        </div>
