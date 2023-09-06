@@ -1,0 +1,47 @@
+<%- include('_header')%>
+    <%- include('_sidebar')%>
+
+        <div class="main">
+            <h1>
+                <%= interview.subject %><br />
+                    <%= interview.companyName %>
+            </h1>
+            <form action="/interview/createResult/<%= interview._id %>" method="POST">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Student List</th>
+                            <th>Results</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for (student of interview.students) { %>
+                            <tr>
+                                <td>
+                                    <%= student.name %>
+                                </td>
+                                <td>
+                                    <label for="pass_<%= student.name %>">Pass</label>
+                                    <input type="radio" name="result_<%= student.name %>" id="pass_<%= student.name %>"
+                                        value="pass">
+
+                                    <label for="fail_<%= student.name %>">Fail</label>
+                                    <input type="radio" name="result_<%= student.name %>" id="fail_<%= student.name %>"
+                                        value="fail">
+
+                                    <label for="onHold_<%= student.name %>">On Hold</label>
+                                    <input type="radio" name="result_<%= student.name %>"
+                                        id="onHold_<%= student.name %>" value="onHold">
+
+                                    <label for="didntAttempt_<%= student.name %>">Didn't Attempt</label>
+                                    <input type="radio" name="result_<%= student.name %>"
+                                        id="didntAttempt_<%= student.name %>" value="didntAttempt">
+                                </td>
+                            </tr>
+                            <% } %>
+
+                    </tbody>
+                </table>
+                <input type="submit" class="btn btn-submit" value="Submit" />
+            </form>
+        </div>

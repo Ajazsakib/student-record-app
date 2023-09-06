@@ -5,6 +5,8 @@ module.exports.scoreList = async function (req, res)
 
     const scores = await Score.find({}).populate("student")
 
+
+
     return res.render("scoreList", {
         title: "Student Record App",
         scores: scores,

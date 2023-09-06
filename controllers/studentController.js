@@ -36,3 +36,22 @@ module.exports.createStudent = async function (req, res)
 
     res.redirect("/student")
 }
+
+module.exports.deleteStudent = async function (req, res)
+{
+    await Student.findByIdAndDelete(req.params.id)
+
+    res.redirect("/student")
+}
+
+
+const Result = require("../models/result")
+module.exports.result = async function (req, res)
+{
+
+    const results = await Result.find({})
+    return res.render("resultList", {
+        title: "Student Record App",
+        results: results,
+    })
+}

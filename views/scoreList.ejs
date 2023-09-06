@@ -18,32 +18,37 @@
                 </thead>
                 <tbody>
                     <% for (score of scores) {%>
-                        <tr>
-                            <td>
-                                <%= score.student.name %>
-                            </td>
-                            <td>
-                                <%= score.dsaScore %>
-                            </td>
-                            <td>
-                                <%= score.webDScore %>
-                            </td>
-                            <td>
-                                <%= score.reactScore %>
-                            </td>
-                            <td>
-                                <a href="#"><span class="material-symbols-outlined">
-                                        edit
-                                    </span></a>
-                                <a href="#">
-                                    <span class="material-symbols-outlined">
-                                        delete
-                                    </span>
-                                </a>
-                            </td>
+                        <% if(score.student) { %>
+                            <tr>
+                                <td>
 
-                        </tr>
-                        <%}%>
+                                    <%= score.student.name %>
+
+
+                                </td>
+                                <td>
+                                    <%= score.dsaScore %>
+                                </td>
+                                <td>
+                                    <%= score.webDScore %>
+                                </td>
+                                <td>
+                                    <%= score.reactScore %>
+                                </td>
+                                <td>
+                                    <a href="#"><span class="material-symbols-outlined">
+                                            edit
+                                        </span></a>
+                                    <a href="#">
+                                        <span class="material-symbols-outlined">
+                                            delete
+                                        </span>
+                                    </a>
+                                </td>
+
+                            </tr>
+                            <% }%>
+                                <%}%>
 
 
 

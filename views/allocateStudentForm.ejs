@@ -1,0 +1,60 @@
+<%- include('_header')%>
+    <%- include('_sidebar')%>
+
+
+        <div class="main">
+            <h1>Allocate Student</h1>
+            <form class="form-container" action="/interview/allocate/<%= interviewId %>" method="POST">
+                <div class="multiselect">
+                    <div class="dropdown-select" onclick="showDropdown()">
+                        Select Items
+                        <!-- <span id="selected-items"></span> -->
+                    </div>
+                    <div class="dropdown-content" id="dropdown-content">
+                        <% for(student of students) { %>
+                            <label class="checkbox">
+                                <input type="checkbox" name="student[]" value="<%= student._id %>">
+                                <%= student.name %>
+                            </label>
+                            <% }%>
+
+
+                                <!-- Add more options as needed -->
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-submit mt-23" value="Submit" />
+                </div>
+            </form>
+        </div>
+
+
+
+        <script>
+            function showDropdown() {
+                var dropdownContent = document.getElementById("dropdown-content");
+                if (dropdownContent.style.display === "block")
+                {
+                    dropdownContent.style.display = "none";
+                } else
+                {
+                    dropdownContent.style.display = "block";
+                }
+            }
+
+            var checkboxes = document.querySelectorAll(".checkbox input");
+            var selectedItems = document.getElementById("selected-items");
+
+            checkboxes.forEach(function (checkbox) {
+                checkbox.addEventListener("change", function () {
+                    var selected = [];
+                    checkboxes.forEach(function (cb) {
+                        if (cb.checked)
+                        {
+                            selected.push(cb.value);
+                        }
+                    });
+                    selectedItems.textContent = selected.join(", ");
+                });
+            });
+        </script>

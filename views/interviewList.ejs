@@ -1,0 +1,40 @@
+<%- include('_header')%>
+    <%- include('_sidebar')%>
+
+        <div class="main">
+            <h1>Interview</h1>
+            <div class="add">
+                <a href="/interview/add"><button class="btn btn-submit">Add</button></a>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Date</th>
+                        <th>Company Name</th>
+                        <th>Student</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(interview of interviews) { %>
+                        <tr>
+                            <td>
+                                <a href="/interview/<%= interview._id %>">
+                                    <%= interview.subject%>
+                                </a>
+                            </td>
+                            <td>
+                                <%= interview.date%>
+                            </td>
+                            <td>
+                                <%= interview.companyName%>
+                            </td>
+                            <td>
+                                <a href="/interview/allocate/<%= interview._id %>">Allocate Students</a>
+                            </td>
+                        </tr>
+                        <%}%>
+
+                </tbody>
+            </table>
+        </div>

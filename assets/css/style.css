@@ -80,6 +80,10 @@ body {
     align-items: center;
     padding: 0 30px;
     color: #ffffff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
 }
 
 .header-wrap .menu ul {
@@ -136,6 +140,7 @@ body {
     padding: 30px;
     background-color: #ededed;
     position: relative;
+    margin-top: 50px;
 }
 
 .main .add {
@@ -180,4 +185,36 @@ body {
 
 .mt-23 {
     margin-top: 23px;
+}
+
+/* Style for the dropdown container */
+.multiselect {
+    width: 200px;
+    margin: 10px;
+}
+
+/* Style for the dropdown button */
+.dropdown-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/* Style for the dropdown content (checkboxes) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 200px;
+}
+
+/* Style for the checkboxes within the dropdown */
+.checkbox {
+    display: block;
+    padding: 10px;
 }

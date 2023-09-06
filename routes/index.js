@@ -12,5 +12,6 @@ router.use('/user', require('./user'));
 router.use('/student', require('./student'));
 router.use('/batch', require('./batch'));
 router.use('/score', require('./score'));
+router.use('/interview', require('./interview'));
 
 module.exports = router

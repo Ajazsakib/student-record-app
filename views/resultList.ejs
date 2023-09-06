@@ -1,0 +1,34 @@
+<%- include('_header')%>
+    <%- include('_sidebar')%>
+
+        <div class="main">
+            <h1>Result</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Company Name</th>
+                        <th>Interview Subject</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(result of results) { %>
+                        <tr>
+                            <td>
+                                <%= result.studentName %>
+                            </td>
+                            <td>
+                                <%= result.companyName %>
+                            </td>
+                            <td>
+                                <%= result.interviewSubject %>
+                            </td>
+                            <td>
+                                <%= result.result %>
+                            </td>
+                        </tr>
+                        <%} %>
+                </tbody>
+            </table>
+        </div>
