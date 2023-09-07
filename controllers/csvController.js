@@ -92,6 +92,4 @@ module.exports.makeCsvFile = async function (req, res) {
   res.setHeader('Content-Disposition', 'attachment; filename=data.csv');
   res.setHeader('Content-Type', 'text/csv');
   res.download('data.csv', 'data.csv');
-
-  res.redirect('/');
 };
