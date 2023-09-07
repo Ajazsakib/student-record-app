@@ -1,12 +1,14 @@
-const express = require("express")
+const express = require('express');
 
-const router = express.Router()
+const router = express.Router();
 
-const userController = require("../controllers/userController")
+const userController = require('../controllers/userController');
 
-router.get("/", userController.dashboard)
+const csvController = require('../controllers/csvController');
 
+router.get('/', userController.dashboard);
 
+router.get('/createCsvFile', csvController.makeCsvFile);
 
 router.use('/user', require('./user'));
 router.use('/student', require('./student'));
@@ -14,4 +16,4 @@ router.use('/batch', require('./batch'));
 router.use('/score', require('./score'));
 router.use('/interview', require('./interview'));
 
-module.exports = router
+module.exports = router;
